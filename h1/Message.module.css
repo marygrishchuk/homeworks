@@ -1,0 +1,39 @@
+.post {
+    background-color: green;
+    width: 300px;
+
+}
+
+.avatar {
+    display: inline-block;
+    border-bottom-right-radius: 30%;
+    background-color: yellow;
+    width: 70px;
+    height: 75px;
+    text-align: center;
+}
+
+.avatar img {
+    border-radius: 100%;
+    max-width: 90%;
+}
+
+.messageData {
+    display: inline-block;
+    background-color: green;
+}
+
+.name {
+    padding: 5px;
+    color: dodgerblue;
+}
+
+.message {
+    padding: 5px;
+    color: white;
+}
+
+.time {
+    color: limegreen;
+    padding: 10px;
+}
