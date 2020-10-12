@@ -1,0 +1,17 @@
+.smallerFont {
+    font-size: smaller;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+.removeBtn {
+    font-size: smaller;
+    color: grey;
+    font-family: "Sitka Banner";
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid grey;
+    margin: 2px;
+}

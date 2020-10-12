@@ -11,9 +11,11 @@
     width: 70px;
     height: 75px;
     text-align: center;
+
 }
 
 .avatar img {
+    margin-top: 5px;
     border-radius: 100%;
     max-width: 90%;
 }

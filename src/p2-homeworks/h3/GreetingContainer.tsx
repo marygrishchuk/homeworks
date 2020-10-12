@@ -19,7 +19,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = (props) => { // 
     const onAddUserKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
         setError(null)
         if(e.key === "Enter") {
-            props.addUserCallback(name.trim())
+            addUser(name)
         }
     }
 

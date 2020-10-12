@@ -1,8 +1,9 @@
 import React from "react";
 import Message from "./Message";
+import image from "./imageArtem.jpg"
 
 const messageData = {
-    avatar: "https://www.graycell.ru/picture/big/vanya2.jpg",
+    avatar: `${image}`,
     name: "Artem",
     message: "npm start нажимал?",
     time: "20:00",
@@ -12,9 +13,7 @@ function HW1() {
     return (
         <div>
             <hr/>
-            homework 1
-
-            should work (должно работать) and works :)
+            <h4>homework 1:</h4>
 
             <Message
                 avatar={messageData.avatar}

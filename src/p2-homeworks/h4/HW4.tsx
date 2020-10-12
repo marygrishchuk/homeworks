@@ -21,7 +21,7 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
+            <h4>homework 4:</h4>
 
             <div className={s.column}>
                 {/*should work (должно работать)*/}

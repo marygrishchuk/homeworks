@@ -1,3 +1,17 @@
-.someClass {
+.activeBtn {
+    background-color: green;
+    width: 55px;
+    margin: 1px;
+    border-radius: 5px;
+    border: 1px solid green;
+    color: white;
+}
 
+.nonActiveBtn {
+    width: 55px;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: grey;
+    border: 1px solid grey;
+    color: white;
 }
