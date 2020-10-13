@@ -9,7 +9,7 @@ beforeEach(() => {
         {_id: 2, name: "anime", priority: "low"},
         {_id: 3, name: "games", priority: "low"},
         {_id: 4, name: "work", priority: "high"},
-        {_id: 5, name: "html & css", priority: "middle"},
+        {_id: 5, name: "html & css", priority: "medium"},
         {_id: 6, name: "porn", priority: "low"},
     ]
 });
@@ -23,7 +23,7 @@ test("filter by high", () => {
     expect(newState.length).toBe(2);
 });
 test("filter by middle", () => {
-    const newState = filterAffairs(initialState, "middle");
+    const newState = filterAffairs(initialState, "medium");
     expect(newState.length).toBe(1);
 });
 test("filter by low", () => {

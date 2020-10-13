@@ -21,7 +21,7 @@ function Affairs(props: AffairsPropsType) {
 
     const setAll = () => {props.setFilter("all")};
     const setHigh = () => {props.setFilter("high")};
-    const setMiddle = () => {props.setFilter("middle")};
+    const setMedium = () => {props.setFilter("medium")};
     const setLow = () => {props.setFilter("low")};
 
     return (
@@ -31,7 +31,7 @@ function Affairs(props: AffairsPropsType) {
 
             <button className={props.filter === "all" ? s.activeBtn : s.nonActiveBtn} onClick={setAll}>All</button>
             <button className={props.filter === "high" ? s.activeBtn : s.nonActiveBtn} onClick={setHigh}>High</button>
-            <button className={props.filter === "middle" ? s.activeBtn : s.nonActiveBtn} onClick={setMiddle}>Middle</button>
+            <button className={props.filter === "medium" ? s.activeBtn : s.nonActiveBtn} onClick={setMedium}>Medium</button>
             <button className={props.filter === "low" ? s.activeBtn : s.nonActiveBtn} onClick={setLow}>Low</button>
         </div>
     );

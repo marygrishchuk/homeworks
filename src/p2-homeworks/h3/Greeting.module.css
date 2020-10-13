@@ -12,7 +12,7 @@
 }
 
 .addBtn {
-    width: 55px;
+    width: 60px;
     margin: 1px;
     border-radius: 5px;
     background-color: grey;
@@ -22,7 +22,7 @@
 
 .addBtn:active {
     background-color: green;
-    width: 55px;
+    width: 60px;
     margin: 1px;
     border-radius: 5px;
     border: 1px solid green;

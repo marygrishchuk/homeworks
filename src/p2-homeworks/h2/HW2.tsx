@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Affairs from "./Affairs";
 
 // types
-export type AffairPriorityType = "low" | "high" | "middle"
+export type AffairPriorityType = "low" | "high" | "medium"
 export type AffairType = {
     _id: number
     name: string
@@ -16,15 +16,15 @@ const defaultAffairs: Array<AffairType> = [
     {_id: 2, name: "anime", priority: "low"},
     {_id: 3, name: "games", priority: "low"},
     {_id: 4, name: "work", priority: "high"},
-    {_id: 5, name: "html & css", priority: "middle"},
+    {_id: 5, name: "html & css", priority: "medium"},
 ];
 
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
     if (filter === "high") {
         return affairs.filter(a => a.priority === "high")
-    } else if (filter === "middle") {
-        return affairs.filter(a => a.priority === "middle")
+    } else if (filter === "medium") {
+        return affairs.filter(a => a.priority === "medium")
     } else if (filter === "low") {
         return affairs.filter(a => a.priority === "low")
     } else {
