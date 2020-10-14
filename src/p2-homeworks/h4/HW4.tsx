@@ -9,7 +9,7 @@ function HW4() {
     const error = text.trim() !== "" ? "" : "Error";
     const showAlert = () => {
         if (error) {
-            alert("Enter text...");
+            alert("Please enter text...");
         } else {
             alert(text); // show text if there is no error
         }
