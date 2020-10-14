@@ -6,17 +6,18 @@ import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");
-    const error = text ? "" : "error";
+    const error = text.trim() !== "" ? "" : "Error";
     const showAlert = () => {
         if (error) {
-            alert("введите текст...");
+            alert("Enter text...");
         } else {
-            alert(text); // если нет ошибки показать текст
+            alert(text); // show text if there is no error
         }
     }
 
     const [checked, setChecked] = useState<boolean>(false);
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
+    const [checked2, setChecked2] = useState<boolean>(false);
+    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked2(e.currentTarget.checked);
 
     return (
         <div>
@@ -24,41 +25,40 @@ function HW4() {
             <h4>homework 4:</h4>
 
             <div className={s.column}>
-                {/*should work (должно работать)*/}
+
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue}
+                    spanClassName={s.superSpan}
                 />
 
-                {/*should work (должно работать)*/}
                 <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
+                    red  // this props has boolean value, so it is not mandatory to assign 'true'
+                    className={s.blue}
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    Delete {/*the button name can be later found in 'children' props*/}
                 </SuperButton>
 
-                {/*should work (должно работать)*/}
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    Text
+                    {/*this text can be later found in 'children' props*/}
                 </SuperCheckbox>
+                <SuperCheckbox checked={checked2} onChange={testOnChange}/>
 
-                {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <hr/>
+                {/*// for personal creativity:*/}
+                {/*// <AlternativeSuperInputText/>*/}
+                {/*// <AlternativeSuperButton/>*/}
+                {/*// <AlternativeSuperCheckbox/>*/}
+                {/*// <hr/>*/}
             </div>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
-            <hr/>
         </div>
     );
 }

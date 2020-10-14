@@ -18,17 +18,17 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = (props) => { // 
     }
     const onAddUserKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
         setError(null)
-        if(e.key === "Enter") {
+        if (e.key === "Enter") {
             addUser(name)
         }
     }
 
     const addUser = (name: string) => {
         if (name.trim() !== "") {
-        props.addUserCallback(name.trim())
-        alert(`Hello ${name.trim()}!`)
-        setName("")
-    } else {
+            props.addUserCallback(name.trim())
+            alert(`Hello ${name.trim()}!`)
+            setName("")
+        } else {
             setError("Username is required")
         }
     }

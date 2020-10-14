@@ -1,7 +1,26 @@
 .default {
-
+    background: grey;
+    width: 60px;
+    margin: 1px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: white;
 }
 
 .red {
     background: red;
+    width: 60px;
+    margin: 1px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: white;
+}
+
+.red:active {
+    background: green;
+    width: 60px;
+    margin: 1px;
+    border-radius: 5px;
+    border: 1px solid green;
+    color: white;
 }

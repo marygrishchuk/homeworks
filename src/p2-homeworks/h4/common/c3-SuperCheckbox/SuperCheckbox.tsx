@@ -1,7 +1,7 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from "react";
 import s from "./SuperCheckbox.module.css";
 
-// тип пропсов обычного инпута
+// standard input props type:
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 type SuperCheckboxPropsType = DefaultInputPropsType & {
@@ -11,16 +11,19 @@ type SuperCheckboxPropsType = DefaultInputPropsType & {
 
 const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     {
-        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
+        type,
         onChange, onChangeChecked,
         className, spanClassName,
-        children, // в эту переменную попадёт текст, типизировать не нужно так как он затипизирован в React.FC
+        children, // contains text which is typified in React.FC
 
-        ...restProps// все остальные пропсы попадут в объект restProps
+        ...restProps// contains all the remaining props
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // сделайте так чтоб работал onChange и onChangeChecked
+        onChange // if there is 'onChange'
+        && onChange(e); // then it gets 'е' (because 'onChange' is not mandatory)
+
+        onChangeChecked && onChangeChecked(e.currentTarget.checked);
     }
 
     const finalInputClassName = `${s.checkbox} ${className ? className : ""}`;
@@ -32,10 +35,10 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
                 onChange={onChangeCallback}
                 className={finalInputClassName}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
+                {...restProps} // 'restProps' object containing all the remaining props including "checked"
             />
             {children && <span className={s.spanClassName}>{children}</span>}
-        </label> // благодаря label нажатие на спан передастся в инпут
+        </label> // owing to the 'label' tag, clicking the span will place focus at the input
     );
 }
 

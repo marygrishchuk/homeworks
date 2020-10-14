@@ -1,12 +1,12 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent} from "react";
 import s from "./SuperInputText.module.css";
 
-// тип пропсов обычного инпута
+// standard input props type:
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
-// здесь мы говорим что у нашего инпута будут такие же пропсы как у обычного инпута
-// (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
-type SuperInputTextPropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
+// Here we point out that our input will have the same props as those of a standard input.
+// (value: string, onChange: ... are not necessary since they are described in DefaultInputPropsType)
+type SuperInputTextPropsType = DefaultInputPropsType & { // + more props that are not contained in a standard input
     onChangeText?: (value: string) => void
     onEnter?: () => void
     error?: string
@@ -15,31 +15,31 @@ type SuperInputTextPropsType = DefaultInputPropsType & { // и + ещё проп
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
     {
-        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
+        type, //
         onChange, onChangeText,
         onKeyPress, onEnter,
         error,
         className, spanClassName,
 
-        ...restProps// все остальные пропсы попадут в объект restProps
+        ...restProps// 'restProps' object containing all the remaining props
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange // если есть пропс onChange
-        && onChange(e); // то передать ему е (поскольку onChange не обязателен)
+        onChange // if there is 'onChange' props
+        && onChange(e); // then it gets 'е' (because 'onChange' is not mandatory)
 
         onChangeText && onChangeText(e.currentTarget.value);
     }
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
         onKeyPress && onKeyPress(e);
 
-        e.key === "Enter" // если нажата кнопка Enter
-        && onEnter // и есть пропс onEnter
-        && onEnter(); // то вызвать его
+        e.key === "Enter" // if 'Enter' key is pressed
+        && onEnter // and if there is 'onEnter' props
+        && onEnter(); // then 'onEnter' will be called
     }
 
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ""}`;
-    const finalInputClassName = `${s.errorInput} ${className}`; // need to fix with (?:) and s.superInput
+    const finalInputClassName = `${error ? s.errorInput : s.superInput}`;
 
     return (
         <>
@@ -49,7 +49,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 onKeyPress={onKeyPressCallback}
                 className={finalInputClassName}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+                {...restProps} // all the remaining props if there are any, including 'value'
             />
             {error && <span className={finalSpanClassName}>{error}</span>}
         </>
