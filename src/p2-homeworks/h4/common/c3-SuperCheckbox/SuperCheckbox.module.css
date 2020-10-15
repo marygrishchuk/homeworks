@@ -13,5 +13,5 @@
 .checkbox:checked {
     vertical-align: bottom;
     font-size: 1.2em;
-    box-shadow: 3px 3px 2px olive;
+    box-shadow: 3px 3px 6px olive;
 }
