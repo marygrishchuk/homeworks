@@ -1,6 +1,11 @@
+.spanClassName {
+    font-style: italic;
+}
+
 .checkbox {
     vertical-align: bottom;
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
     background: green;
     font-size: medium;
 }
@@ -8,9 +13,5 @@
 .checkbox:checked {
     vertical-align: bottom;
     font-size: 1.2em;
-}
-
-
-.spanClassName {
-    font-style: italic;
+    box-shadow: 3px 3px 2px olive;
 }

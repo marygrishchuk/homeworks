@@ -1,5 +1,5 @@
 .post {
-    background-color: green;
+    background-color: olive;
     width: 300px;
 
 }
@@ -22,7 +22,7 @@
 
 .messageData {
     display: inline-block;
-    background-color: green;
+    background-color: olive;
 }
 
 .name {
@@ -36,6 +36,6 @@
 }
 
 .time {
-    color: limegreen;
+    color: lightgray;
     padding: 10px;
 }
