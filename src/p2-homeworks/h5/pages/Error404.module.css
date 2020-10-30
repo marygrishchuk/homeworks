@@ -1,0 +1,15 @@
+.error404 {
+    color: darkslategray;
+    border: 1px solid gray;
+    border-radius: 20px;
+    height: 150px;
+    width: 200px;
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.error404 img {
+    height: 100px;
+}

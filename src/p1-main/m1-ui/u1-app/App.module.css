@@ -1,4 +1,14 @@
 .App {
-    padding-left: 10px;
+    padding-top: 85px;
+    padding-left: 40px;
     font-family: "Arial";
 }
+
+.menuBtn {
+    height: 30px;
+    width: 50px;
+    padding: 5px;
+    border: none;
+    background: url("./menu.png") no-repeat;
+}
+
