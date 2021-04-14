@@ -1,18 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import {PATH} from "./Routes";
 import s from "./Header.module.css";
 
-type HeaderType = {
-    visible: boolean
-}
+function Header() {
+    let [visible, setVisible] = useState<boolean>(false)
 
-function Header(props: HeaderType) {
+    const onDivClick = () => {
+        setVisible(!visible)
+    }
+
     return (
-        <div className={props.visible ? `${s.navbar} ${s.shown}` : `${s.navbar} ${s.hidden}`}>
-            <div><NavLink to={PATH.PRE_JUNIOR}>Homeworks 1-4</NavLink></div>
-            <div><NavLink to={PATH.PRE_JUNIOR_PLUS}>PreJunior+</NavLink></div>
-            <div><NavLink to={PATH.EMPTY_PAGE}>Empty Page</NavLink></div>
+        <div className={s.header}>
+            <div className={visible ? `${s.navbar} ${s.shown}` : `${s.navbar} ${s.hidden}`}>
+                <button onClick={onDivClick}><NavLink to={PATH.PRE_JUNIOR}>Homeworks 1-4</NavLink></button>
+                <button onClick={onDivClick}><NavLink to={PATH.PRE_JUNIOR_PLUS}>PreJunior+</NavLink></button>
+                <button onClick={onDivClick}><NavLink to={PATH.EMPTY_PAGE}>Empty Page</NavLink></button>
+                <button onClick={onDivClick}><NavLink to={PATH.HOMEWORK_6}>Homework 6</NavLink></button>
+            </div>
+            <button className={s.btn} onClick={onDivClick}></button>
         </div>
     );
 }

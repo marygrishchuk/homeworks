@@ -1,18 +1,29 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
 .navbar {
-    width: 100vw;
-    height: 80px;
-    background-color: #3a6d99;
+    width: 15vw;
+    min-width: fit-content;
+    min-height: 100%;
+    background-color: #72b4ee;
     position: fixed;
     top: 0;
     left: 0;
     transition: transform .3s;
     overflow: auto;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .hidden {
-    transform: translate3d(0, -80px, 0);
-
+    transform: translate3d(-100%, 0, 0);
 }
 
 .shown {
@@ -20,13 +31,22 @@
     overflow-y: auto;
 }
 
+.navbar button {
+    background-color: #5c6792;
+    width: 150px;
+    height: fit-content;
+    margin: 5px;
+    border-radius: 5px;
+}
+
 .navbar a {
-    color: whitesmoke;
+    font-size: medium;
+    color: white;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    text-decoration: whitesmoke;
 }
 
 .navbar a:visited, a:active, a:focus {
@@ -34,6 +54,11 @@
     padding: 5px;
 }
 
-.navbar div {
-    padding: 5px 30px 1px;
+.btn {
+    height: 30px;
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #3a6d99;
+    background: url("./menu.png") no-repeat center;
+    background-size: 50px 30px;
 }
