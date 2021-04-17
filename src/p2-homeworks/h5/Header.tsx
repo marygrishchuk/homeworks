@@ -19,6 +19,7 @@ function Header() {
                 <NavLink to={PATH.HOMEWORK_6} onClick={onDivClick}>Homework 6</NavLink>
                 <NavLink to={PATH.HOMEWORK_7} onClick={onDivClick}>Homework 7</NavLink>
                 <NavLink to={PATH.HOMEWORK_8} onClick={onDivClick}>Homework 8</NavLink>
+                <NavLink to={PATH.HOMEWORK_9} onClick={onDivClick}>Homework 9</NavLink>
             </div>
             <button className={s.btn} onClick={onDivClick}></button>
         </div>

@@ -1,0 +1,26 @@
+.clock {
+    position: relative;
+}
+
+.time {
+    width: 100%;
+    text-align: center;
+    background-color: #fae9d3;
+    padding: 5px 0;
+    color: #e70303;
+    margin: 10px 0;
+    border-radius: 5px;
+    min-width: fit-content;
+}
+
+.date {
+    background-color: #d7e8fa;
+    color: #7c70ee;
+    position: absolute;
+    left: 70px;
+    top: -20px;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 1px 0;
+
+}
