@@ -31,18 +31,17 @@
     overflow-y: auto;
 }
 
-.navbar button {
-    background-color: #5c6792;
-    width: 150px;
-    height: fit-content;
-    margin: 5px;
-    border-radius: 5px;
-}
-
 .navbar a {
+    background-color: #5c6792;
+    width: 70%;
+    padding: 5px 0;
+    min-height: fit-content;
+    margin: 10px auto;
+    border-radius: 5px;
     font-size: medium;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 .navbar a:hover {

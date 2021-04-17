@@ -13,11 +13,12 @@ function Header() {
     return (
         <div className={s.header}>
             <div className={visible ? `${s.navbar} ${s.shown}` : `${s.navbar} ${s.hidden}`}>
-                <button onClick={onDivClick}><NavLink to={PATH.PRE_JUNIOR}>Homeworks 1-4</NavLink></button>
-                <button onClick={onDivClick}><NavLink to={PATH.PRE_JUNIOR_PLUS}>PreJunior+</NavLink></button>
-                <button onClick={onDivClick}><NavLink to={PATH.EMPTY_PAGE}>Empty Page</NavLink></button>
-                <button onClick={onDivClick}><NavLink to={PATH.HOMEWORK_6}>Homework 6</NavLink></button>
-                <button onClick={onDivClick}><NavLink to={PATH.HOMEWORK_7}>Homework 7</NavLink></button>
+                <NavLink to={PATH.PRE_JUNIOR} onClick={onDivClick}>Homeworks 1-4</NavLink>
+                <NavLink to={PATH.PRE_JUNIOR_PLUS} onClick={onDivClick}>PreJunior+</NavLink>
+                <NavLink to={PATH.EMPTY_PAGE} onClick={onDivClick}>Empty Page</NavLink>
+                <NavLink to={PATH.HOMEWORK_6} onClick={onDivClick}>Homework 6</NavLink>
+                <NavLink to={PATH.HOMEWORK_7} onClick={onDivClick}>Homework 7</NavLink>
+                <NavLink to={PATH.HOMEWORK_8} onClick={onDivClick}>Homework 8</NavLink>
             </div>
             <button className={s.btn} onClick={onDivClick}></button>
         </div>

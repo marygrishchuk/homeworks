@@ -1,4 +1,4 @@
-import React, {DetailedHTMLProps, HTMLAttributes, InputHTMLAttributes, useState} from "react";
+import React, {DetailedHTMLProps, Dispatch, HTMLAttributes, InputHTMLAttributes, SetStateAction, useState} from "react";
 import SuperInputText from "../../../h4/common/c1-SuperInputText/SuperInputText";
 import s from "./SuperEditableSpan.module.css"
 

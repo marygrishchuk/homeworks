@@ -6,6 +6,7 @@ import EmptyPage from "./pages/EmptyPage";
 import PreJuniorPlus from "./pages/PreJuniorPlus";
 import HW6 from "../h6/HW6";
 import HW7 from "../h7/HW7";
+import HW8 from "../h8/HW8";
 
 export const PATH = {
     PRE_JUNIOR: "/pre-junior",
@@ -13,6 +14,7 @@ export const PATH = {
     EMPTY_PAGE: "/empty-page",
     HOMEWORK_6: "/homework-6",
     HOMEWORK_7: "/homework-7",
+    HOMEWORK_8: "/homework-8",
 }
 
 function Routes() {
@@ -30,6 +32,7 @@ function Routes() {
             <Route path={PATH.EMPTY_PAGE} render={() => <EmptyPage/>}/>
             <Route path={PATH.HOMEWORK_6} render={() => <HW6/>}/>
             <Route path={PATH.HOMEWORK_7} render={() => <HW7/>}/>
+            <Route path={PATH.HOMEWORK_8} render={() => <HW8/>}/>
 
             {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
             <Route render={() => <Error404/>}/>
