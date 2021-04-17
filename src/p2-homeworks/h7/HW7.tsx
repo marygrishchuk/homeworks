@@ -10,7 +10,7 @@ function HW7() {
     return (
         <div>
             <hr/>
-            homeworks 7
+            <h4>homeworks 7:</h4>
 
             {/*should work (должно работать)*/}
             <div>
@@ -20,6 +20,7 @@ function HW7() {
                     onChangeOption={onChangeOption}
                 />
             </div>
+            <br/>
             <div>
                 <SuperRadio
                     name={"radio"}
