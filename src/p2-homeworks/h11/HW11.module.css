@@ -1,7 +1,9 @@
 .upperRange {
     display: flex;
+    justify-content: space-around;
 }
 
 .lowerRange {
     display: flex;
+    margin: 10px 0;
 }
